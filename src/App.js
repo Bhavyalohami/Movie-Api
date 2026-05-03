@@ -5,6 +5,7 @@ import MovieCard from "./MovieCard";
 import "./App.css";
 
 const API_URL = "https://api.tvmaze.com/search/shows";
+const PUBLIC_URL = process.env.PUBLIC_URL || "";
 const STARTER_QUERIES = ["batman", "marvel", "crime", "comedy"];
 const QUICK_SEARCHES = ["Batman", "Marvel", "Crime", "Anime", "Comedy", "Drama"];
 const NAV_ITEMS = ["Home", "Discover", "Collections", "Compare", "Insights", "Watchlist", "About"];
@@ -766,7 +767,7 @@ function App() {
     <main className="app">
       <header className="site-header">
         <button className="brand" type="button" onClick={() => navigate("Home")} aria-label="CineStack home">
-          <img src="/cinestack-logo.svg" alt="" />
+          <img src={`${PUBLIC_URL}/cinestack-logo.svg`} alt="" />
         </button>
 
         <button
@@ -972,7 +973,7 @@ function Footer({ navigate }) {
     <footer className="site-footer">
       <div>
         <button className="footer-brand" type="button" onClick={() => navigate("Home")}>
-          <img src="/cinestack-logo.svg" alt="" />
+          <img src={`${PUBLIC_URL}/cinestack-logo.svg`} alt="" />
         </button>
         <p>
           A fast, refined movie and series discovery interface built with React and TVMaze data.
