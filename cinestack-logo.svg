@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 160" role="img" aria-labelledby="title">
+  <title id="title">CineStack</title>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#54f4dc"/>
+      <stop offset="0.48" stop-color="#ff3f57"/>
+      <stop offset="1" stop-color="#ff9f2e"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.33 0 0 0 0 0.96 0 0 0 0 0.86 0 0 0 0.9 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="560" height="160" rx="38" fill="#0b0b0f"/>
+  <g filter="url(#glow)">
+    <path d="M48 44h42v16H64v40h26v16H48z" fill="url(#g)"/>
+    <path d="M126 44H84v16h26v40H84v16h42z" fill="url(#g)"/>
+    <circle cx="87" cy="80" r="12" fill="#ff3f57"/>
+  </g>
+  <text x="156" y="77" fill="#fffaf2" font-family="Inter, Arial, sans-serif" font-size="43" font-weight="900" letter-spacing="-1">CineStack</text>
+  <text x="158" y="111" fill="#8d8d99" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="800" letter-spacing="3">WATCH SIGNAL ENGINE</text>
+</svg>
