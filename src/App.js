@@ -4,7 +4,7 @@ import CinemaGalaxy from "./CinemaGalaxy";
 import MovieCard from "./MovieCard";
 import "./App.css";
 
-const API_URL = "http://api.tvmaze.com/search/shows";
+const API_URL = "https://api.tvmaze.com/search/shows";
 const STARTER_QUERIES = ["batman", "marvel", "crime", "comedy"];
 const QUICK_SEARCHES = ["Batman", "Marvel", "Crime", "Anime", "Comedy", "Drama"];
 const NAV_ITEMS = ["Home", "Discover", "Collections", "Compare", "Insights", "Watchlist", "About"];
@@ -30,7 +30,7 @@ const normalizeShow = (item) => {
     rating: show.rating?.average,
     network: show.network?.name || show.webChannel?.name || "Independent",
     country: show.network?.country?.name || show.webChannel?.country?.name || "Global",
-    image: (show.image?.original || show.image?.medium || "").replace("https://", "http://"),
+    image: show.image?.original || show.image?.medium || "",
     summary: stripTags(show.summary) || "No summary is available for this title yet.",
     url: show.url,
     officialSite: show.officialSite,
