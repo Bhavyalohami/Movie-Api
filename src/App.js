@@ -776,13 +776,14 @@ function App() {
           onClick={() => setMenuOpen((current) => !current)}
           aria-label="Toggle navigation"
           aria-expanded={menuOpen}
+          aria-controls="primary-navigation"
         >
           <span />
           <span />
           <span />
         </button>
 
-        <nav className={`nav-links ${menuOpen ? "open" : ""}`} aria-label="Primary navigation">
+        <nav id="primary-navigation" className={`nav-links ${menuOpen ? "open" : ""}`} aria-label="Primary navigation">
           {NAV_ITEMS.map((item) => (
             <button
               key={item}
